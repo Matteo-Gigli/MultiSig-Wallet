@@ -105,7 +105,7 @@ contract MultiSig{
         address _to = transactionIdDetails[txId].to;
         uint amountToSend = transactionIdDetails[txId].amount;
         payable(_to).transfer(amountToSend);
-        proposalStatus = true;
+        transactionIdDetails[txId].executed = true;
 
     }
 
